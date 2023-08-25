@@ -70,17 +70,18 @@ Program to verify the truth table in quartus for the basic logic gates using Ver
 Developed by: Mohamed azeem N
 RegisterNumber:  212222110026
 
-module exp2 (A,B,C,D,F1);
-input A,B,C,D;
-output F1;
-wire x1,x2,x3,x4,x5;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign F1=x1|x2|x3|x4|x5;
+module exp01(a,b,yand,yor,ynot,yxor,ynand,ynor,yxnor);
+input a,b;
+output yand,yor,ynot,yxor,ynand,ynor,yxnor;
+and(yand,a,b);
+or(yor,a,b);
+not(ynot,a);
+xor(yxor,a,b);
+nand(ynand,a,b);
+nor(ynor,a,b);
+xnor(yxnor,a,b);
 endmodule
+
 ```
 
 Logic symbol & Truthtable
